@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Build with Flexbox 1</title>
+	<link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+			font-family: sans-serif;
+		}
+		:root {
+			font-size: 16px;
+		}
+		body {
+			background-color: #ddd;
+		}
+		#container {
+			display: flex;
+			flex-direction: column;
+		}
+		#header, #footer {
+			background-color: #333;
+			color: #ddd;
+		}
+		#header {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 13px 4%;
+		}
+		#logo {
+			font-family: Staatliches;
+			color: #ccc;
+			font-size: 1.2rem;
+		}
+		#nav {
+			display: flex;
+			flex-direction: row;
+		}
+		#nav a {
+			margin-right: 13px;
+			color: #ddd;
+			text-decoration: none;
+			font-size: 1rem;
+		}
+		#nav a:nth-child(1) {
+			color: #aaa;
+		}
+		#main {
+			min-height: 100vh;
+			display: flex;
+			flex-direction: row;
+		}
+		#left-side {
+			width: 290px;
+			background-color: #434343;
+		}
+		#right-side {
+			flex-grow: 1;
+			background-color: #ddd;
+		}
+		#footer {
+			text-align: center;
+			padding: 10px;
+		}
+		@media (max-width: 1080px) {
+			#main {
+				flex-direction: column;
+			}
+			#left-side {
+				min-height: 80px;
+				width: 100%;
+			}
+		}
+		@media (max-width: 600px) {
+			#nav a {
+				font-size: 0.9rem;
+			}
+			#logo {
+				font-size: 1.06rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header id="header">
+			<div id="logo">Whatever</div>
+			<div id="nav">
+				<a href="#">Homepage</a>
+				<a href="#">Menu</a>
+				<a href="#">Menu</a>
+				<a href="#">Menu</a>
+			</div>
+		</header>
+		<main id="main">
+			<div id="left-side"></div>
+			<div id="right-side"></div>
+		</main>
+		<footer id="footer">&copy; Copyright Your Name</footer>
+	</div>
+</body>
+</html>
+
+<!-- from: Joie Patsy (Youtube Channel) | Coding Playlist (Instagram) -->
